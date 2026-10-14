@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SmartFarm - Smarter Farming, Better Harvests</title>
   <meta name="description" content="Empowering farmers with practical agronomic advice, disease diagnosis guides, and water-smart techniques in English and Telugu.">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<text y=%2226%22 font-size=%2226%22>🌱</text></svg>">
 </head>
@@ -14,54 +20,99 @@
   <header class="header-navbar">
     <div class="container nav-container">
       <a href="#home" class="brand-logo">
-        <div class="logo-icon">🌱</div>
+        <div class="logo-icon-wrap">🌱</div>
         <div>
-          <span class="brand-text" data-i18n="brandName">SmartFarm</span>
-          <span class="brand-sub" data-i18n="tagline">Smarter Farming, Better Harvests.</span>
+          <div class="brand-title">
+            <span data-i18n="brandName">SmartFarm</span>
+            <span class="brand-badge">PRO</span>
+          </div>
+          <span class="brand-tagline-sub" data-i18n="tagline">Smarter Farming, Better Harvests.</span>
         </div>
       </a>
 
       <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home" data-i18n="navHome">Home</a></li>
-          <li><a href="#advisor" data-i18n="navAdvisor">Crop Advisor</a></li>
-          <li><a href="#diseases" data-i18n="navDiseases">Disease Guide</a></li>
-          <li><a href="#water" data-i18n="navWater">Water-Saving Tips</a></li>
-          <li><a href="#about" data-i18n="navAbout">About Us</a></li>
+        <ul class="nav-menu" id="navLinks">
+          <li><a href="#home" class="nav-link" data-i18n="navHome">Home</a></li>
+          <li><a href="#advisor" class="nav-link" data-i18n="navAdvisor">Crop Advisor</a></li>
+          <li><a href="#diseases" class="nav-link" data-i18n="navDiseases">Disease Guide</a></li>
+          <li><a href="#water" class="nav-link" data-i18n="navWater">Water-Saving Tips</a></li>
+          <li><a href="#assistant" class="nav-link" data-i18n="navAssistant">Farm Assistant</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">About Us</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <!-- Language Switcher Button -->
-        <button id="langToggleBtn" class="lang-toggle-btn" title="Switch Language / భాషను మార్చుకోండి">
+        <!-- Language Switcher Pill -->
+        <button id="langToggleBtn" class="lang-toggle-pill" title="Switch Language / భాషను మార్చుకోండి">
           🇮🇳 తెలుగు
         </button>
         <a href="#advisor" class="btn btn-primary btn-sm" data-i18n="navGetStarted">Get Started</a>
-        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <button class="mobile-menu-btn" id="mobileNavToggle" aria-label="Toggle navigation" aria-expanded="false">
           ☰
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section with Photographic Farm Backdrop & Warm Accents -->
   <section id="home" class="hero-section">
-    <div class="container hero-content">
-      <div class="hero-badge" data-i18n="heroBadge">🌱 Sustainable Agriculture Platform</div>
-      <h1 class="hero-title" data-i18n="heroTitle">
-        Smarter Farming, <br><span class="highlight">Better Harvests.</span>
-      </h1>
-      <p class="hero-desc" data-i18n="heroDesc">
-        Get instant crop suitability recommendations, practical crop disease management tips, and water-conservation techniques tailored for your soil and season.
-      </p>
+    <div class="container hero-grid">
+      <div class="hero-content-col">
+        <div class="hero-badge-wrap" data-i18n="heroBadge">🌱 Sustainable Agriculture Platform</div>
+        <h1 class="hero-title" data-i18n="heroTitle">
+          Smarter Farming, <br><span class="highlight">Better Harvests.</span>
+        </h1>
+        <p class="hero-description" data-i18n="heroDesc">
+          Get instant crop suitability recommendations, practical crop disease management tips, and water-conservation techniques tailored for your soil, season, and water availability.
+        </p>
 
-      <div class="hero-cta-group">
-        <a href="#advisor" class="btn btn-primary" data-i18n="btnAdvisor">Try Crop Advisor</a>
-        <a href="#diseases" class="btn btn-secondary" data-i18n="btnDisease">Check Disease Guide</a>
+        <div class="hero-cta-wrap">
+          <a href="#advisor" class="btn btn-gold" data-i18n="btnAdvisor">Try Crop Advisor</a>
+          <a href="#diseases" class="btn btn-secondary" data-i18n="btnDisease">Check Disease Guide</a>
+          <a href="#assistant" class="btn btn-primary" data-i18n="btnAssistant">Ask Farm Assistant</a>
+        </div>
+
+        <div class="hero-demo-pill" data-i18n="demoNote">
+          * Designed for hackathon demonstration with curated agronomic sample data.
+        </div>
       </div>
 
-      <div class="hero-demo-note" data-i18n="demoNote">
-        * Designed for hackathon demonstration with curated agronomic sample data.
+      <!-- Hero Visual Showcase Card -->
+      <div class="hero-feature-showcase">
+        <div class="showcase-header">
+          <h3>⚡ Hackathon Ready Features</h3>
+          <p>Zero-dependency, high-reliability local agricultural intelligence</p>
+        </div>
+        <div class="showcase-features-list">
+          <div class="showcase-item">
+            <span class="showcase-icon">🌾</span>
+            <div class="showcase-text">
+              <strong>4-Dimension Crop Advisor</strong>
+              <span>Soil type, cropping season, state, and water availability matching.</span>
+            </div>
+          </div>
+          <div class="showcase-item">
+            <span class="showcase-icon">🛡️</span>
+            <div class="showcase-text">
+              <strong>Live Disease Guide & Caution</strong>
+              <span>Instant search with diagnostic safety warnings and next steps.</span>
+            </div>
+          </div>
+          <div class="showcase-item">
+            <span class="showcase-icon">🤖</span>
+            <div class="showcase-text">
+              <strong>Farm Assistant (రైతు మిత్ర)</strong>
+              <span>Interactive bilingual AI chat with local offline knowledge base.</span>
+            </div>
+          </div>
+          <div class="showcase-item">
+            <span class="showcase-icon">🌐</span>
+            <div class="showcase-text">
+              <strong>100% English & Telugu Sync</strong>
+              <span>Instant seamless toggle preserving all inputs without reloading.</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -88,22 +139,22 @@
     </div>
   </section>
 
-  <!-- Section 1: Crop Advisor -->
+  <!-- Section 1: Crop Advisor (4 Dimensions) -->
   <section id="advisor" class="crop-advisor-section">
     <div class="container">
       <div class="section-header">
         <span class="section-tag-pill" data-i18n="navAdvisor">Crop Advisor</span>
         <h2 data-i18n="advisorTitle">Smart Crop Advisor</h2>
         <p data-i18n="advisorSubtitle">
-          Select your farm's soil type and cropping season to discover the most suitable crops and harvest tips.
+          Select your farm's soil type, cropping season, state, and water availability to discover suitable crops and harvest tips.
         </p>
       </div>
 
-      <div class="advisor-controls-card">
-        <div class="advisor-grid">
-          <!-- Soil Type Select -->
+      <div class="advisor-form-card">
+        <div class="advisor-inputs-grid">
+          <!-- 1. Soil Type Select -->
           <div class="form-group">
-            <label for="soilSelect" data-i18n="labelSoil">1. Select Soil Type</label>
+            <label for="soilSelect" data-i18n="labelSoil">1. Select Soil Type *</label>
             <select id="soilSelect" class="custom-select">
               <option value="" disabled selected data-i18n="chooseSoilPlaceholder">-- Choose Soil Type --</option>
               <option value="black" data-i18n="soilBlack">Black Cotton Soil (Regur)</option>
@@ -115,9 +166,9 @@
             </select>
           </div>
 
-          <!-- Season Select -->
+          <!-- 2. Season Select -->
           <div class="form-group">
-            <label for="seasonSelect" data-i18n="labelSeason">2. Select Cropping Season</label>
+            <label for="seasonSelect" data-i18n="labelSeason">2. Select Cropping Season *</label>
             <select id="seasonSelect" class="custom-select">
               <option value="" disabled selected data-i18n="chooseSeasonPlaceholder">-- Choose Season --</option>
               <option value="kharif" data-i18n="seasonKharif">Kharif (Monsoon: June – October)</option>
@@ -125,9 +176,35 @@
               <option value="zaid" data-i18n="seasonZaid">Zaid (Summer: March – June)</option>
             </select>
           </div>
+
+          <!-- 3. State / Location Select -->
+          <div class="form-group">
+            <label for="stateSelect" data-i18n="labelState">3. Location / State</label>
+            <select id="stateSelect" class="custom-select">
+              <option value="all" selected data-i18n="stateAll">All India (Pan-India)</option>
+              <option value="ap" data-i18n="stateAP">Andhra Pradesh</option>
+              <option value="ts" data-i18n="stateTS">Telangana</option>
+              <option value="ka" data-i18n="stateKA">Karnataka</option>
+              <option value="mh" data-i18n="stateMH">Maharashtra</option>
+              <option value="tn" data-i18n="stateTN">Tamil Nadu</option>
+              <option value="pb" data-i18n="statePB">Punjab & Haryana</option>
+              <option value="up" data-i18n="stateUP">Uttar Pradesh / Bihar</option>
+            </select>
+          </div>
+
+          <!-- 4. Water Availability Select -->
+          <div class="form-group">
+            <label for="waterSelect" data-i18n="labelWater">4. Available Water Level</label>
+            <select id="waterSelect" class="custom-select">
+              <option value="all" selected data-i18n="waterAll">Any Water Availability</option>
+              <option value="low" data-i18n="waterLow">Low / Rainfed (&lt; 500 mm)</option>
+              <option value="medium" data-i18n="waterMedium">Moderate / Canal or Borewell (500 - 900 mm)</option>
+              <option value="high" data-i18n="waterHigh">Assured / High Irrigation (&gt; 900 mm)</option>
+            </select>
+          </div>
         </div>
 
-        <div class="advisor-buttons">
+        <div class="advisor-actions-row">
           <button id="btnFindCrops" class="btn btn-primary" data-i18n="btnFindCrops">
             🌾 Find Suitable Crops
           </button>
@@ -136,12 +213,16 @@
           </button>
         </div>
 
+        <div id="advisorValidationAlert" class="validation-alert" data-i18n="advisorValidationMsg">
+          Please select Soil Type and Season to generate suggestions.
+        </div>
+
         <!-- Quick Demo Presets For Hackathon Judges -->
         <div class="presets-container">
           <span class="presets-label" data-i18n="quickDemoPresets">Quick Test Presets for Judges:</span>
-          <button class="preset-btn" data-soil="black" data-season="kharif" data-i18n="preset1">Black Soil + Kharif</button>
-          <button class="preset-btn" data-soil="red" data-season="rabi" data-i18n="preset2">Red Soil + Rabi</button>
-          <button class="preset-btn" data-soil="loamy" data-season="zaid" data-i18n="preset3">Loamy Soil + Zaid</button>
+          <button class="preset-chip" data-soil="black" data-season="kharif" data-state="ap" data-water="medium" data-i18n="preset1">Black Soil + Kharif</button>
+          <button class="preset-chip" data-soil="red" data-season="rabi" data-state="ts" data-water="low" data-i18n="preset2">Red Soil + Rabi</button>
+          <button class="preset-chip" data-soil="loamy" data-season="zaid" data-state="all" data-water="medium" data-i18n="preset3">Loamy Soil + Zaid</button>
         </div>
       </div>
 
@@ -163,10 +244,18 @@
         </p>
       </div>
 
-      <!-- Search & Filters -->
-      <div class="disease-filter-bar">
-        <div class="search-input-wrapper">
-          <span class="search-icon">🔍</span>
+      <!-- Diagnostic Caution Banner -->
+      <div class="disease-caution-card">
+        <div class="caution-icon">⚠️</div>
+        <div class="caution-text" data-i18n="diseaseCautionBanner">
+          Diagnostic Caution: Visual symptoms alone cannot confirm a definitive diagnosis. Consult your local Krishi Vigyan Kendra (KVK) or Agricultural Extension Officer (AEO) before applying chemical treatments.
+        </div>
+      </div>
+
+      <!-- Search & Category Filters -->
+      <div class="disease-filter-area">
+        <div class="search-input-box">
+          <span class="search-glass-icon">🔍</span>
           <input 
             type="text" 
             id="diseaseSearchInput" 
@@ -176,14 +265,14 @@
           >
         </div>
 
-        <div class="filter-pills-row">
-          <button class="disease-filter-pill active" data-category="all" data-i18n="filterAll">All Crops</button>
-          <button class="disease-filter-pill" data-category="rice" data-i18n="filterRice">Rice / Paddy</button>
-          <button class="disease-filter-pill" data-category="cotton" data-i18n="filterCotton">Cotton</button>
-          <button class="disease-filter-pill" data-category="tomato" data-i18n="filterTomato">Tomato & Veggies</button>
-          <button class="disease-filter-pill" data-category="wheat" data-i18n="filterWheat">Wheat</button>
-          <button class="disease-filter-pill" data-category="chili" data-i18n="filterChili">Chili</button>
-          <button class="disease-filter-pill" data-category="groundnut" data-i18n="filterGroundnut">Groundnut</button>
+        <div class="disease-filter-pills-row">
+          <button class="filter-pill active" data-category="all" data-i18n="filterAll">All Crops</button>
+          <button class="filter-pill" data-category="rice" data-i18n="filterRice">Rice / Paddy</button>
+          <button class="filter-pill" data-category="cotton" data-i18n="filterCotton">Cotton</button>
+          <button class="filter-pill" data-category="tomato" data-i18n="filterTomato">Tomato & Veggies</button>
+          <button class="filter-pill" data-category="wheat" data-i18n="filterWheat">Wheat</button>
+          <button class="filter-pill" data-category="chili" data-i18n="filterChili">Chili</button>
+          <button class="filter-pill" data-category="groundnut" data-i18n="filterGroundnut">Groundnut</button>
         </div>
       </div>
 
@@ -205,7 +294,7 @@
         </p>
       </div>
 
-      <!-- Water Saving Strategy Cards -->
+      <!-- Strategy Cards -->
       <div id="waterTipsGrid" class="water-tips-grid">
         <!-- Rendered dynamically by app.js -->
       </div>
@@ -272,7 +361,81 @@
     </div>
   </section>
 
-  <!-- Section 4: About SmartFarm -->
+  <!-- Section 4: Farm Assistant (Bilingual Q&A System) -->
+  <section id="assistant" class="assistant-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag-pill" data-i18n="navAssistant">Farm Assistant</span>
+        <h2 data-i18n="assistantTitle">Farm Assistant (రైతు మిత్ర)</h2>
+        <p data-i18n="assistantSubtitle">
+          Ask questions on crops, soil management, irrigation, organic Jeevamrutham, pests, and government helplines.
+        </p>
+      </div>
+
+      <div class="chat-card-container">
+        <!-- Chat Header -->
+        <div class="chat-card-header">
+          <div class="assistant-info-wrap">
+            <div class="assistant-avatar">🌱</div>
+            <div>
+              <div class="assistant-name" data-i18n="assistantTitle">Farm Assistant (రైతు మిత్ర)</div>
+              <div class="assistant-status">
+                <span class="status-dot"></span> Online (Bilingual Knowledge Engine)
+              </div>
+            </div>
+          </div>
+
+          <button id="btnClearChat" class="btn btn-secondary btn-sm" data-i18n="btnClearChat">
+            Clear Chat
+          </button>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div id="chatMessages" class="chat-messages-container">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+
+        <!-- Typing Indicator -->
+        <div id="chatTypingIndicator" class="typing-indicator">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span style="font-size: 0.82rem; color: var(--text-muted); margin-left: 6px;" data-i18n="chatThinking">Consulting knowledge base...</span>
+        </div>
+
+        <!-- Suggested Question Chips -->
+        <div class="suggested-chips-bar">
+          <span class="suggested-label" data-i18n="suggestedQuestionsLabel">Suggested:</span>
+          <button class="chat-chip" data-i18n="chip1">Best crops for Black Soil in Kharif?</button>
+          <button class="chat-chip" data-i18n="chip2">How to save water in paddy fields?</button>
+          <button class="chat-chip" data-i18n="chip3">Tomato leaf curl prevention</button>
+          <button class="chat-chip" data-i18n="chip4">How to prepare Jeevamrutham?</button>
+          <button class="chat-chip" data-i18n="chip5">Government Kisan helpline number</button>
+        </div>
+
+        <!-- Input Bar -->
+        <div class="chat-input-bar">
+          <input 
+            type="text" 
+            id="chatInputField" 
+            class="chat-input-field" 
+            placeholder="Ask a farming question in English or Telugu (e.g., how to prepare Jeevamrutham?)..." 
+            data-i18n-placeholder="chatInputPlaceholder"
+            autocomplete="off"
+          >
+          <button id="btnSendChat" class="btn btn-primary" data-i18n="btnSend">
+            Send
+          </button>
+        </div>
+
+        <div class="chat-footnote" data-i18n="chatDisclaimer">
+          SmartFarm Assistant provides curated educational guidance. For urgent on-field agricultural emergencies, dial the National Kisan Call Center Toll-Free at 1800-180-1551.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: About SmartFarm -->
   <section id="about" class="about-section">
     <div class="container">
       <div class="section-header">
@@ -281,7 +444,7 @@
         <p data-i18n="aboutSubtitle">Addressing grassroots agricultural hurdles with accessible digital tools.</p>
       </div>
 
-      <div class="about-split">
+      <div class="about-split-cards">
         <div class="about-card problem">
           <h3 data-i18n="problemTitle">The Problem We Solve</h3>
           <p data-i18n="problemText">
@@ -297,11 +460,11 @@
         </div>
       </div>
 
-      <div class="about-pillars">
+      <div class="pillars-grid">
         <div class="pillar-box">
           <div class="pillar-icon">🌱</div>
-          <h4 data-i18n="pillar1Title">Soil & Season Matching</h4>
-          <p data-i18n="pillar1Text">Evidence-backed agronomic guidelines connecting specific soil compositions with regional seasons.</p>
+          <h4 data-i18n="pillar1Title">Soil, Season & Water Matching</h4>
+          <p data-i18n="pillar1Text">Evidence-backed agronomic guidelines connecting specific soil compositions with regional seasons and water levels.</p>
         </div>
 
         <div class="pillar-box">
@@ -328,7 +491,7 @@
           <p data-i18n="tagline">Smarter Farming, Better Harvests.</p>
         </div>
 
-        <div class="footer-lang-picker">
+        <div class="footer-lang-wrap">
           <label for="langSelect" data-i18n="langSwitchLabel">Language / భాష:</label>
           <select id="langSelect" class="footer-lang-select">
             <option value="en">English</option>
@@ -337,8 +500,8 @@
         </div>
       </div>
 
-      <div class="footer-disclaimer" data-i18n="footerDisclaimer">
-        Disclaimer: SmartFarm is an academic hackathon prototype providing curated educational guidance based on standard agronomic recommendations. It does not provide real-time satellite meteorology or automated AI diagnostics.
+      <div class="footer-disclaimer-box" data-i18n="footerDisclaimer">
+        Disclaimer: SmartFarm is an academic hackathon prototype providing curated educational guidance based on standard agronomic recommendations. It does not provide real-time satellite meteorology, live stock trading, or automated chemical prescribing.
       </div>
 
       <div class="footer-bottom" data-i18n="footerCopyright">
@@ -347,9 +510,15 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Floating Chat Toggle Pill -->
+  <button id="floatingChatToggle" class="floating-chat-toggle" title="Chat with Farm Assistant">
+    💬 Ask Farm Assistant
+  </button>
+
+  <!-- Core Scripts -->
   <script src="js/translations.js"></script>
   <script src="js/data.js"></script>
+  <script src="js/knowledge.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>
