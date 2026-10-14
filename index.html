@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartFarm - Smarter Farming, Better Harvests</title>
+  <meta name="description" content="Empowering farmers with practical agronomic advice, disease diagnosis guides, and water-smart techniques in English and Telugu.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<text y=%2226%22 font-size=%2226%22>🌱</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="header-navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <div class="logo-icon">🌱</div>
+        <div>
+          <span class="brand-text" data-i18n="brandName">SmartFarm</span>
+          <span class="brand-sub" data-i18n="tagline">Smarter Farming, Better Harvests.</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" data-i18n="navHome">Home</a></li>
+          <li><a href="#advisor" data-i18n="navAdvisor">Crop Advisor</a></li>
+          <li><a href="#diseases" data-i18n="navDiseases">Disease Guide</a></li>
+          <li><a href="#water" data-i18n="navWater">Water-Saving Tips</a></li>
+          <li><a href="#about" data-i18n="navAbout">About Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Button -->
+        <button id="langToggleBtn" class="lang-toggle-btn" title="Switch Language / భాషను మార్చుకోండి">
+          🇮🇳 తెలుగు
+        </button>
+        <a href="#advisor" class="btn btn-primary btn-sm" data-i18n="navGetStarted">Get Started</a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-badge" data-i18n="heroBadge">🌱 Sustainable Agriculture Platform</div>
+      <h1 class="hero-title" data-i18n="heroTitle">
+        Smarter Farming, <br><span class="highlight">Better Harvests.</span>
+      </h1>
+      <p class="hero-desc" data-i18n="heroDesc">
+        Get instant crop suitability recommendations, practical crop disease management tips, and water-conservation techniques tailored for your soil and season.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#advisor" class="btn btn-primary" data-i18n="btnAdvisor">Try Crop Advisor</a>
+        <a href="#diseases" class="btn btn-secondary" data-i18n="btnDisease">Check Disease Guide</a>
+      </div>
+
+      <div class="hero-demo-note" data-i18n="demoNote">
+        * Designed for hackathon demonstration with curated agronomic sample data.
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Statistics Strip -->
+  <section class="stats-strip">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <h3>6+</h3>
+        <p data-i18n="statSoilTypes">Soil Types Covered</p>
+      </div>
+      <div class="stat-item">
+        <h3>3</h3>
+        <p data-i18n="statSeasons">Crop Seasons</p>
+      </div>
+      <div class="stat-item">
+        <h3>10+</h3>
+        <p data-i18n="statDiseases">Documented Plant Issues</p>
+      </div>
+      <div class="stat-item">
+        <h3>40%-60%</h3>
+        <p data-i18n="statWaterSaved">Potential Water Savings</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: Crop Advisor -->
+  <section id="advisor" class="crop-advisor-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag-pill" data-i18n="navAdvisor">Crop Advisor</span>
+        <h2 data-i18n="advisorTitle">Smart Crop Advisor</h2>
+        <p data-i18n="advisorSubtitle">
+          Select your farm's soil type and cropping season to discover the most suitable crops and harvest tips.
+        </p>
+      </div>
+
+      <div class="advisor-controls-card">
+        <div class="advisor-grid">
+          <!-- Soil Type Select -->
+          <div class="form-group">
+            <label for="soilSelect" data-i18n="labelSoil">1. Select Soil Type</label>
+            <select id="soilSelect" class="custom-select">
+              <option value="" disabled selected data-i18n="chooseSoilPlaceholder">-- Choose Soil Type --</option>
+              <option value="black" data-i18n="soilBlack">Black Cotton Soil (Regur)</option>
+              <option value="red" data-i18n="soilRed">Red Soil (Sandy/Clay Loam)</option>
+              <option value="alluvial" data-i18n="soilAlluvial">Alluvial Soil (River Plains)</option>
+              <option value="loamy" data-i18n="soilLoamy">Loamy Soil (Balanced & Fertile)</option>
+              <option value="sandy" data-i18n="soilSandy">Sandy Soil (Dry / High Drainage)</option>
+              <option value="clay" data-i18n="soilClay">Clay Soil (Dense Moisture-Retaining)</option>
+            </select>
+          </div>
+
+          <!-- Season Select -->
+          <div class="form-group">
+            <label for="seasonSelect" data-i18n="labelSeason">2. Select Cropping Season</label>
+            <select id="seasonSelect" class="custom-select">
+              <option value="" disabled selected data-i18n="chooseSeasonPlaceholder">-- Choose Season --</option>
+              <option value="kharif" data-i18n="seasonKharif">Kharif (Monsoon: June – October)</option>
+              <option value="rabi" data-i18n="seasonRabi">Rabi (Winter: October – March)</option>
+              <option value="zaid" data-i18n="seasonZaid">Zaid (Summer: March – June)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="advisor-buttons">
+          <button id="btnFindCrops" class="btn btn-primary" data-i18n="btnFindCrops">
+            🌾 Find Suitable Crops
+          </button>
+          <button id="btnResetAdvisor" class="btn btn-secondary" data-i18n="btnResetAdvisor">
+            Reset Selection
+          </button>
+        </div>
+
+        <!-- Quick Demo Presets For Hackathon Judges -->
+        <div class="presets-container">
+          <span class="presets-label" data-i18n="quickDemoPresets">Quick Test Presets for Judges:</span>
+          <button class="preset-btn" data-soil="black" data-season="kharif" data-i18n="preset1">Black Soil + Kharif</button>
+          <button class="preset-btn" data-soil="red" data-season="rabi" data-i18n="preset2">Red Soil + Rabi</button>
+          <button class="preset-btn" data-soil="loamy" data-season="zaid" data-i18n="preset3">Loamy Soil + Zaid</button>
+        </div>
+      </div>
+
+      <!-- Results Display Container -->
+      <div id="advisorResults" class="advisor-results-area">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Crop Disease Guide -->
+  <section id="diseases" class="disease-section-wrapper">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag-pill" data-i18n="navDiseases">Disease Guide</span>
+        <h2 data-i18n="diseaseTitle">Crop Disease & Pest Guide</h2>
+        <p data-i18n="diseaseSubtitle">
+          Quickly identify prevalent crop illnesses, key visible symptoms, and proven preventive measures.
+        </p>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="disease-filter-bar">
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="diseaseSearchInput" 
+            placeholder="Search by crop, disease name, or symptom (e.g., blast, wilt, yellow spots)..."
+            data-i18n-placeholder="searchPlaceholder"
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="filter-pills-row">
+          <button class="disease-filter-pill active" data-category="all" data-i18n="filterAll">All Crops</button>
+          <button class="disease-filter-pill" data-category="rice" data-i18n="filterRice">Rice / Paddy</button>
+          <button class="disease-filter-pill" data-category="cotton" data-i18n="filterCotton">Cotton</button>
+          <button class="disease-filter-pill" data-category="tomato" data-i18n="filterTomato">Tomato & Veggies</button>
+          <button class="disease-filter-pill" data-category="wheat" data-i18n="filterWheat">Wheat</button>
+          <button class="disease-filter-pill" data-category="chili" data-i18n="filterChili">Chili</button>
+          <button class="disease-filter-pill" data-category="groundnut" data-i18n="filterGroundnut">Groundnut</button>
+        </div>
+      </div>
+
+      <!-- Disease Cards Grid -->
+      <div id="diseaseCardsGrid" class="diseases-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Water Saving Tips & Calculator -->
+  <section id="water" class="water-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag-pill" data-i18n="navWater">Water Stewardship</span>
+        <h2 data-i18n="waterTitle">Water-Saving & Irrigation Practices</h2>
+        <p data-i18n="waterSubtitle">
+          Combat drought and maximize water-use efficiency through field-proven water conservation methods.
+        </p>
+      </div>
+
+      <!-- Water Saving Strategy Cards -->
+      <div id="waterTipsGrid" class="water-tips-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Interactive Water Saving Estimator -->
+      <div class="calculator-box">
+        <div class="calculator-header">
+          <h3 data-i18n="calcTitle">Interactive Water-Saving Estimator</h3>
+          <p data-i18n="calcSubtitle">Calculate how much water and energy your farm can save by transitioning to micro-irrigation.</p>
+        </div>
+
+        <div class="calc-grid">
+          <!-- Inputs -->
+          <div class="calc-inputs">
+            <div class="form-group">
+              <label for="calcAreaInput" data-i18n="calcAreaLabel">Farm Size (in Acres):</label>
+              <input type="number" id="calcAreaInput" class="calc-input-field" value="2" min="0.5" max="100" step="0.5">
+            </div>
+
+            <div class="form-group">
+              <label for="calcCurrentMethod" data-i18n="calcMethodLabel">Current Irrigation Method:</label>
+              <select id="calcCurrentMethod" class="calc-input-field">
+                <option value="flood" selected data-i18n="methodFlood">Traditional Flood Irrigation (Low Efficiency)</option>
+                <option value="furrow" data-i18n="methodFurrow">Furrow / Basin Irrigation (Medium Efficiency)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="calcTargetMethod" data-i18n="calcTargetLabel">Upgrade To:</label>
+              <select id="calcTargetMethod" class="calc-input-field">
+                <option value="drip" selected data-i18n="methodDrip">Drip Irrigation System (90% Efficiency)</option>
+                <option value="sprinkler" data-i18n="methodSprinkler">Micro-Sprinklers (75% Efficiency)</option>
+              </select>
+            </div>
+
+            <button id="btnCalculateWater" class="btn btn-primary" data-i18n="btnCalculate">
+              💧 Calculate Water Savings
+            </button>
+          </div>
+
+          <!-- Calculated Results Display -->
+          <div class="calc-results-panel">
+            <div class="res-tile">
+              <div class="res-label" data-i18n="calcResultWater">Estimated Water Saved Annually</div>
+              <div class="res-number" id="resWaterSaved">25.0 Lakh Liters</div>
+            </div>
+
+            <div class="res-tile">
+              <div class="res-label" data-i18n="calcResultPower">Pumping Electricity Saved</div>
+              <div class="res-number" id="resPowerSaved">760 kWh</div>
+            </div>
+
+            <div class="res-tile">
+              <div class="res-label" data-i18n="calcResultYield">Average Potential Yield Boost</div>
+              <div class="res-number" id="resYieldBoost">+22%</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="calc-footnote" data-i18n="calcEfficiencyText">
+          Micro-irrigation directs water right to the root zone, slashing evaporation and weed growth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: About SmartFarm -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag-pill" data-i18n="navAbout">About Us</span>
+        <h2 data-i18n="aboutTitle">About SmartFarm</h2>
+        <p data-i18n="aboutSubtitle">Addressing grassroots agricultural hurdles with accessible digital tools.</p>
+      </div>
+
+      <div class="about-split">
+        <div class="about-card problem">
+          <h3 data-i18n="problemTitle">The Problem We Solve</h3>
+          <p data-i18n="problemText">
+            Over 80% of small and marginal farmers make crop choices based on guesswork or informal hearsay. Inappropriate soil-crop matching leads to crop failures, ground water exhaustion, and severe yield reductions. Furthermore, delays in identifying early fungal and pest diseases result in heavy financial losses.
+          </p>
+        </div>
+
+        <div class="about-card solution">
+          <h3 data-i18n="solutionTitle">Our Hackathon Solution</h3>
+          <p data-i18n="solutionText">
+            SmartFarm is a lightweight, zero-dependency, bilingual web guide that provides immediate, rule-based crop guidance, disease mitigation strategies, and practical water conservation methods without requiring costly hardware, paid API keys, or internet bandwidth hurdles.
+          </p>
+        </div>
+      </div>
+
+      <div class="about-pillars">
+        <div class="pillar-box">
+          <div class="pillar-icon">🌱</div>
+          <h4 data-i18n="pillar1Title">Soil & Season Matching</h4>
+          <p data-i18n="pillar1Text">Evidence-backed agronomic guidelines connecting specific soil compositions with regional seasons.</p>
+        </div>
+
+        <div class="pillar-box">
+          <div class="pillar-icon">🇮🇳</div>
+          <h4 data-i18n="pillar2Title">Bilingual Inclusivity</h4>
+          <p data-i18n="pillar2Text">Native Telugu and English support ensuring local farmers can read and apply knowledge comfortably.</p>
+        </div>
+
+        <div class="pillar-box">
+          <div class="pillar-icon">💧</div>
+          <h4 data-i18n="pillar3Title">Water Stewardship</h4>
+          <p data-i18n="pillar3Text">Actionable micro-irrigation calculations and mulching guidance to conserve critical groundwater.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4 data-i18n="brandName">SmartFarm</h4>
+          <p data-i18n="tagline">Smarter Farming, Better Harvests.</p>
+        </div>
+
+        <div class="footer-lang-picker">
+          <label for="langSelect" data-i18n="langSwitchLabel">Language / భాష:</label>
+          <select id="langSelect" class="footer-lang-select">
+            <option value="en">English</option>
+            <option value="te">తెలుగు (Telugu)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer" data-i18n="footerDisclaimer">
+        Disclaimer: SmartFarm is an academic hackathon prototype providing curated educational guidance based on standard agronomic recommendations. It does not provide real-time satellite meteorology or automated AI diagnostics.
+      </div>
+
+      <div class="footer-bottom" data-i18n="footerCopyright">
+        © 2026 SmartFarm Project - Built for College Hackathon. Smarter Farming, Better Harvests.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
